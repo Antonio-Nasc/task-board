@@ -1,14 +1,16 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ThemeToggleComponent } from './shared/components/theme-toggle/theme-toggle.component';
 import { ThemeService } from './shared/services/theme.service';
+import { Main } from "./layout/main/main";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ThemeToggleComponent],
+  imports: [ThemeToggleComponent, Main],
   template: `
     <div class="relative min-h-screen w-full">
       <app-theme-toggle />
+      <app-main />
     </div>
   `,
   styles: ``,
