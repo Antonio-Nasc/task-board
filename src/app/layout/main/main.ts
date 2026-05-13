@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Category } from '../../features/category/view/category/category';
 import { MatDividerModule } from '@angular/material/divider';
@@ -11,10 +10,10 @@ const MODULES = [MatDividerModule];
   standalone: true,
   imports: [...COMPONENTS, ...MODULES],
   template: `
-    <div class="h-screen flex w-full border-4 border-blue-700">
-      <app-category  class="w-1/4 border-2 border-orange-500" />
-      <mat-divider  class="h-full opacity-50"/>
-      <app-task  class="w-3/4 border-2 border-green-500" />
+    <div class="h-screen flex w-full">
+      <app-category  class="w-1/4" />
+      <mat-divider  class="h-full opacity-50" vertical/>
+      <app-task  class="w-3/4" />
     </div>
   `,
   styles: ``,
